@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: consolas;
+        }
+        div.container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #121213;
+        }
+        .loader {
+            position: relative;
+            -webkit-box-reflect: below -20px linear-gradient(transparent, #0002);
+        }
+        .loader:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: #03e9f4;
+            animation: typing 0.8s steps(3) infinite;
+        }
+        @keyframes typing {
+            0%,75% {
+                opacity: 1;
+            }
+            76%,100% {
+                opacity: 0;
+            }
+        }
+        @keyframes type {
+            0% {
+                width: 0;
+            }
+            30% {
+                width: 400px;
+            }
+            60% {
+                width: 400px;
+            }
+            100% {
+                width: 0;
+            }
+        }
+        .loader h2 {
+            color: #03e9f4;
+            letter-spacing: 5px;
+            font-size: 4em;
+            text-transform: uppercase;
+            animation: type 8s steps(10) infinite;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader">
+            <h2>Loading...</h2>
+        </div>
+    </div>
+</body>
+</html>
